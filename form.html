@@ -7,7 +7,14 @@
   <body>
     入力フォーム<br>
     <form method="post" action="receive.php">
-      料理名：<input type="text" name="recipe_name" required>
+      料理名：<input type="text" name="recipe_name" required><br>
+      カテゴリ：
+      <select name="category">
+        <option hidden>選択してください</option>
+        <option value="1">和食</option>
+        <option value="2">中華</option>
+        <option value="3">洋食</option>
+      </select><br>
       <input type="submit" value="送信">
     </form>
   </body>
