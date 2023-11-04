@@ -23,6 +23,8 @@
       echo number_format($_POST['budget']);
     }
     echo '<br>';
+    echo nl2br(htmlspecialchars($_POST['howto'], ENT_QUOTES));
+    echo '<br>';
     ?>
   </body>
 </html>
