@@ -19,6 +19,10 @@
       '2' => '普通',
       '3' => '難しい',
     } . '<br>';
+    if (is_numeric($_POST['budget'])) {
+      echo number_format($_POST['budget']);
+    }
+    echo '<br>';
     ?>
   </body>
 </html>
