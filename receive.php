@@ -13,6 +13,14 @@
     if ($_POST['category'] == '2') echo '中華';
     if ($_POST['category'] == '3') echo '洋食';
     echo '<br>';
+    if ($_POST['difficulty'] == '1') {
+      echo '簡単';
+    } elseif ($_POST['difficulty'] == '2') {
+      echo '普通';
+    } else {
+      echo '難しい';
+    }
+    echo '<br>';
     ?>
   </body>
 </html>
