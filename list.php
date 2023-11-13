@@ -15,12 +15,11 @@ try {
     echo '<tr>' . PHP_EOL;
     echo '<td>' . htmlspecialchars($row['recipe_name'], ENT_QUOTES) . '</td>' .PHP_EOL;
     echo '<td>' . htmlspecialchars($row['budget'], ENT_QUOTES) . '</td>' .PHP_EOL;
-    echo '<td>' .
-    match ($row['difficulty']) {
-      '1' => '簡単',
-      '2' => '普通',
-      '3' => '難しい',
-    } . '</td>' .PHP_EOL;
+    echo '<td>' . match ($row['difficulty']) {
+      1 => '簡単',
+      2 => '普通',
+      3 => '難しい',
+    } . '</td>' . PHP_EOL;
     echo '</tr>' . PHP_EOL;
   }
   echo '</table>' . PHP_EOL;
