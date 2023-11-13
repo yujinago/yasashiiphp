@@ -7,8 +7,8 @@ if (empty($_GET['id'])) {
 }
 try {
   $id = (int)$_GET['id'];
-  var_dump($id)
+  var_dump($id);
 } catch (PDOException $e) {
-  echo_'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
+  echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
   exit;
 }
