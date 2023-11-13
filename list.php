@@ -7,7 +7,11 @@ try {
   $sql = 'SELECT * FROM recipes';
   $stmt = $dbh->query($sql);
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  print_r($result);
+  echo '<table>' . PHP_EOL;
+  echo '<tr>' . PHP_EOL;
+  echo '<th>料理名</th><th>予算</th><th>難易度</th>' . PHP_EOL;
+  echo '</tr>' . PHP_EOL;
+  echo '</table>' . PHP_EOL;
   $dbh = null;
 } catch (PDOException $e) {
   echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
