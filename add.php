@@ -1,6 +1,6 @@
 <?php
-$user = '';
-$pass = '';
+$user = '◯◯◯';
+$pass = '◯◯◯';
 $recipe_name = $_POST['recipe_name'];
 $howto = $_POST['howto'];
 $category = (int)$_POST['category'];
@@ -16,7 +16,7 @@ try {
   $stmt->bindValue(3, $difficulty, PDO::PARAM_INT);
   $stmt->bindValue(4, $budget, PDO::PARAM_INT);
   $stmt->bindValue(5, $howto, PDO::PARAM_STR);
-  $stmt->ececute();
+  $stmt->execute();
   $dbh = null;
   echo'レシピの登録が完了しました。';
 } catch (PDOException $e) {
