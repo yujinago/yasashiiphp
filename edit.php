@@ -29,7 +29,8 @@ try {
   <body>
     レシピの投稿<br>
     <form method="post" action="update.php?id=<?= htmlspecialchars($result['id'], ENT_QUOTES) ?>">
-      料理名：<input type="text" name="recipe_name" value="<?php echo htmlspecialchars($result['recipe_name'], ENT_QUOTES); ?>"><br>
+      料理名：
+      <input type="text" name="recipe_name" value="<?php echo htmlspecialchars($result['recipe_name'], ENT_QUOTES); ?>"><br>
       カテゴリ：
       <select name="category">
         <option hidden>選択してください</option>
@@ -37,6 +38,20 @@ try {
         <option value="2" <?php if ($result['category'] == 2) echo 'selected' ?>>中華</option>
         <option value="3" <?php if ($result['category'] == 3) echo 'selected' ?>>洋食</option>
       </select><br>
+      難易度：
+      <input type="radio" name="difficulty" value="1" <?php if ($result['difficulty'] == 1) echo 'checked' ?>>簡単
+      <input type="radio" name="difficulty" value="2" <?php if ($result['difficulty'] == 2) echo 'checked' ?>>普通
+      <input type="radio" name="difficulty" value="3" <?php if ($result['difficulty'] == 3) echo 'checked' ?>>難しい
+      <br>
+      予算：
+      <input type="number" name="budget" value="<?= htmlspecialchars($result['budget'], ENT_QUOTES) ?>">円
+      <br>
+      作り方：
+      <textarea name="howto" cols="40" rows="4" maxlength="320">
+        <?= htmlspecialchars($result['howto'], ENT_QUOTES) ?>
+      </textarea>
+      <br>
+      <input type="submit" value="送信">
     </form>
   </body>
 </html>
