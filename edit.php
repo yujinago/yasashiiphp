@@ -8,7 +8,7 @@ if (empty($_GET['id'])) {
 $id = (int)$_GET['id'];
 try {
   $dbh = new PDO('mysql:host=localhost;dbname=db1;charset=utf8', $user, $pass);
-  $dbh->setAttrribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = 'SELECT * FROM recipes WHERE id = ?';
   $stmt = $dbh->prepare($sql);
   $stmt->bindValue(1, $id, PDO::PARAM_INT);
