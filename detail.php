@@ -28,6 +28,7 @@ try {
   } . '<br>' . PHP_EOL;
   echo '作り方:<br>' . nl2br(htmlspecialchars($result['howto'], ENT_QUOTES)) . '<br>' . PHP_EOL;
   $dbh = null;
+  echo '<a href="index.php">トップページへ戻る</a>';
 } catch (PDOException $e) {
   echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
   exit;
