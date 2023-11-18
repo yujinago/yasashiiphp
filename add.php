@@ -1,6 +1,5 @@
 <?php
-$user = '◯◯◯';
-$pass = '◯◯◯';
+require_once __DIR__ . '/../../db_config.php';
 $recipe_name = $_POST['recipe_name'];
 $howto = $_POST['howto'];
 $category = (int)$_POST['category'];
