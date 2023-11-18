@@ -15,6 +15,7 @@ try {
   $stmt->execute();
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
   $dbh = null;
+  echo '<a href="index.php">トップページへ戻る</a>';
 } catch (PDOException $e) {
   echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
   exit;

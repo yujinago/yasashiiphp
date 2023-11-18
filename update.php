@@ -24,7 +24,8 @@ try {
   $stmt->bindValue(6, $id, PDO::PARAM_INT);
   $stmt->execute();
   $dbh = null;
-  echo 'ID: ' . htmlspecialchars($id, ENT_QUOTES) . 'レシピの更新が完了しました。';
+  echo 'ID: ' . htmlspecialchars($id, ENT_QUOTES) . 'レシピの更新が完了しました。<br>';
+  echo '<a href="index.php">トップページへ戻る</a>';
 } catch (PDOException $e) {
   echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
   exit;
